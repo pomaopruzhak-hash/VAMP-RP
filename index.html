@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#09070f">
+  <title>VAMP RP</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="loading" class="loading">
+    <div class="bat">✦</div>
+    <div class="brand">VAMP <span>RP</span></div>
+    <div class="loading-line"><i></i></div>
+    <small>ЗАГРУЗКА ГОРОДА...</small>
+  </div>
+  <header class="topbar">
+    <div class="brand small">VAMP <span>RP</span></div>
+    <div class="server">ROLEPLAY • BETA</div>
+  </header>
+  <section id="character-select" class="character-select">
+    <div class="select-panel">
+      <div class="select-kicker">VAMP RP • ПЕРВЫЙ ВХОД</div>
+      <h1>СОЗДАНИЕ <span>ПЕРСОНАЖА</span></h1>
+      <p>Выбери стартовый скин. Оба новичковых образа доступны бесплатно.</p>
+      <div class="skin-grid">
+        <button class="skin-card selected" data-skin="homeless_male">
+          <div class="skin-preview male-preview"><span>♂</span></div>
+          <strong>ID 1 • Бомж</strong><small>Мужской стартовый скин</small><em>БЕСПЛАТНО</em>
+        </button>
+        <button class="skin-card" data-skin="homeless_female">
+          <div class="skin-preview female-preview"><span>♀</span></div>
+          <strong>ID 2 • Бомжиха</strong><small>Женский стартовый скин</small><em>БЕСПЛАТНО</em>
+        </button>
+        <div class="skin-card locked"><div class="skin-preview city-preview"><span>III</span></div><strong>ID 3 • Городской</strong><small>Откроется позже</small><em>🔒 ЗАКРЫТ</em></div>
+        <div class="skin-card locked"><div class="skin-preview night-preview"><span>IV</span></div><strong>ID 4 • Ночной</strong><small>Откроется позже</small><em>🔒 ЗАКРЫТ</em></div>
+      </div>
+      <div class="select-note">Выбранный скин будет сохранён на этом устройстве.</div>
+      <button id="start-game" class="start-game">НАЧАТЬ ИГРУ</button>
+    </div>
+  </section>
+  <main id="game">
+    <div class="hud">
+      <div class="pill">● <span id="connection">Подключение...</span></div>
+      <div class="pill">Игроки: <span id="players">1</span></div>
+    </div>
+    <div class="hint">Небольшой город • вид от третьего лица</div>
+    <div class="controls">
+      <div class="left-controls">
+        <div id="joystick" class="joystick"><div id="stick" class="stick"></div></div>
+      </div>
+      <div class="right-controls">
+        <button id="run" class="round" aria-label="Бег">🏃</button>
+        <button id="jump" class="round" aria-label="Прыжок">⬆</button>
+        <button id="camera" class="round" aria-label="Камера">◉</button>
+        <button id="car" class="round car" aria-label="Машина">🚗</button>
+      </div>
+    </div>
+    <div id="toast" class="toast">Добро пожаловать в Vamp RP</div>
+  </main>
+  <script type="module" src="/game.js"></script>
+</body>
+</html>
